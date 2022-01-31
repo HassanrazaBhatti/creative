@@ -1,3 +1,5 @@
+import 'package:creative/blood_pressure.dart';
+import 'package:creative/heart_beat.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -34,7 +36,7 @@ class HomePage extends StatelessWidget {
                 const Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      "Ramya",
+                      "Hassan",
                       style: TextStyle(
                           fontSize: 23,
                           fontWeight: FontWeight.bold,
@@ -48,7 +50,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
-                        height: 150,
+                        height: 100,
                         decoration: BoxDecoration(
                           color: Colors.redAccent,
                           borderRadius: BorderRadius.circular(10),
@@ -56,37 +58,27 @@ class HomePage extends StatelessWidget {
                         child: Center(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text(
-                                "HeartBeat",
-                                style: TextStyle(
-                                    fontSize: 15,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w800),
+                            children:  [
+                              GestureDetector(
+                                onTap: (){
+                                Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const HeartBeat()),
+                              );
+                              final snackBar = SnackBar(content: Text('Blood Pressure Button Pressed!'));
+                              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+
+                                },
+                                child:const Text(
+                                  "HeartBeat",
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w800),
+                                ),
                               ),
-                              SizedBox(
-                                height: 15,
-                              ),
-                              Text(
-                                "66",
-                                style: TextStyle(
-                                    fontSize: 17,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w800),
-                              ),
-                              SizedBox(
-                                height: 15,
-                              ),
-                              Text(
-                                "bpm",
-                                style: TextStyle(
-                                    fontSize: 15,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w800),
-                              ),
-                              SizedBox(
-                                height: 15,
-                              ),
+
                             ],
                           ),
                         ),
@@ -97,7 +89,7 @@ class HomePage extends StatelessWidget {
                     ),
                     Expanded(
                       child: Container(
-                        height: 150,
+                        height: 100,
                         decoration: BoxDecoration(
                           color: Colors.black,
                           borderRadius: BorderRadius.circular(10),
@@ -105,37 +97,25 @@ class HomePage extends StatelessWidget {
                         child: Center(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text(
-                                "Blood Pressure",
-                                style: TextStyle(
-                                    fontSize: 15,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w800),
-                              ),
-                              SizedBox(
-                                height: 15,
-                              ),
-                              Text(
-                                "144/90",
-                                style: TextStyle(
-                                    fontSize: 17,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w800),
-                              ),
-                              SizedBox(
-                                height: 15,
-                              ),
-                              Text(
-                                "mmttg",
-                                style: TextStyle(
-                                    fontSize: 15,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w800),
-                              ),
-                              SizedBox(
-                                height: 15,
-                              ),
+                            children: [
+                              GestureDetector(
+                                onTap: (){
+                                   Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const BloodPressure()),
+                              );
+                              final snackBar = SnackBar(content: Text('Heart Beat Button Pressed!'));
+                              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                                },
+                                child: const Text(
+                                  "Blood Pressure",
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w800),
+                                ),
+                              ), 
                             ],
                           ),
                         ),

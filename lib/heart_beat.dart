@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AddAmount extends StatelessWidget {
-  const AddAmount({Key? key}) : super(key: key);
+class HeartBeat extends StatelessWidget {
+  const HeartBeat({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        gradient: LinearGradient(colors: [Colors.blue, Colors.red]),
+        gradient: LinearGradient(colors: [Colors.green, Colors.yellow]),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -16,7 +16,7 @@ class AddAmount extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
-                "This Widget is reserved to add amount page",
+                "Your Heart Beat Is 66 bpm",
                 style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
