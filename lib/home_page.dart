@@ -318,6 +318,17 @@ class HomePage extends StatelessWidget {
                           ],
                         ),
                       ),
+                      const SizedBox(
+                                  height: 10,
+                                ),
+                      FlatButton(
+                      color: Colors.amber,
+                      textColor: Colors.white,
+                      onPressed: () {
+                      const  snackBar =  SnackBar(content: Text('Logout Button Pressed'));
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      },
+                      child: const Text("Logout")),
                     ],
                   ),
                 )
